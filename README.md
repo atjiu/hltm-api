@@ -6,7 +6,7 @@
 - git clone https://github.com/tomoya92/hltm-api.git
 - cd hltm-api
 - npm install 
-- node start
+- npm start
 - 打开浏览器输入 http://localhost:3000 回车
 
 本人也提供了一份线上访问地址 https://hltm-api.tomoya.cn 
