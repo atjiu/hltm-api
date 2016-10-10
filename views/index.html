@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>红旅动漫接口文档(个人开发,非官方)</title>
+  <link rel="icon" href="//tomoya.cn/favicon.ico">
+  <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="row">
+    <div class="col-md-7">
+      <div class="text-center">
+        <h1>红旅动漫接口文档(个人开发,非官方)</h1>
+        <h4><a href="http://tomoya.cn" target="_blank">@朋也</a></h4>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h3>轮播图</h3>
+          <h4>GET: /carousel</h4>
+          <p>
+            对于红旅动漫页面:
+            <a href="http://www.hltm.tv/" target="_blank">http://www.hltm.tv/</a>
+          </p>
+          <p>
+            示例: <a href="/carousel" target="_blank">/carousel</a>
+          </p>
+          <hr>
+          <h3>一周更新(节目单)</h3>
+          <h4>GET: /weekUpdate</h4>
+          <p>
+            对于红旅动漫页面:
+            <a href="http://www.hltm.tv/" target="_blank">http://www.hltm.tv/</a>
+          </p>
+          <p>
+            示例: <a href="/weekUpdate" target="_blank">/weekUpdate</a>
+          </p>
+          <hr>
+          <h3>新增/推荐 连载/完结 动漫</h3>
+          <h4>GET: /addRecommend</h4>
+          <p>
+            对于红旅动漫页面:
+            <a href="http://www.hltm.tv/" target="_blank">http://www.hltm.tv/</a>
+          </p>
+          <p>
+            示例: <a href="/addRecommend" target="_blank">/addRecommend</a>
+          </p>
+          <hr>
+          <h3>最新更新</h3>
+          <h4>GET: /recentUpdate</h4>
+          <p>
+            对于红旅动漫页面:
+            <a href="http://www.hltm.tv/" target="_blank">http://www.hltm.tv/</a>
+          </p>
+          <p>
+            示例: <a href="/recentUpdate" target="_blank">/recentUpdate</a>
+          </p>
+          <hr>
+          <h3>热门新番</h3>
+          <h4>GET: /hotNewAnimate</h4>
+          <p>
+            对于红旅动漫页面:
+            <a href="http://www.hltm.tv/" target="_blank">http://www.hltm.tv/</a>
+          </p>
+          <p>
+            示例: <a href="/hotNewAnimate" target="_blank">/hotNewAnimate</a>
+          </p>
+          <hr>
+          <h3>2016年7月新番排行榜/2016年4月新番排行榜/动漫总排行榜/动漫资讯</h3>
+          <h4>GET: /ranking</h4>
+          <p>
+            对于红旅动漫页面:
+            <a href="http://www.hltm.tv/" target="_blank">http://www.hltm.tv/</a>
+          </p>
+          <p>
+            示例: <a href="/ranking" target="_blank">/ranking</a>
+          </p>
+          <hr>
+          <h3>搜索</h3>
+          <h4>GET: /search</h4>
+          <p>
+            对于红旅动漫页面:
+            <a href="http://www.hltm.tv/search/?k=海贼王" target="_blank">http://www.hltm.tv/search/?k=海贼王</a>
+          </p>
+          <ul>
+            <li>k <code>String</code> 关键字</li>
+            <li>page <code>Number</code> 页数</li>
+          </ul>
+          <p>
+            示例: <a href="/search?k=海贼王&page=1" target="_blank">/search</a>
+          </p>
+          <hr>
+          <h3>动漫详情</h3>
+          <h4>GET: /detail</h4>
+          <p>
+            对于红旅动漫页面:
+            <a href="http://www.hltm.tv/view/972.html" target="_blank">http://www.hltm.tv/view/972.html</a>
+          </p>
+          <ul>
+            <li>url <code>String</code> 对于红旅网站动漫详情页面的url(需要Encoder)</li>
+          </ul>
+          <p>
+            示例: <a href="/detail?url=http%3A%2F%2Fwww.hltm.tv%2Fview%2F12412.html" target="_blank">/detail</a>
+          </p>
+          <hr>
+          <h3>连载动漫/完结动漫</h3>
+          <h4>GET: /list</h4>
+          <p>
+            对于红旅动漫页面:
+            <a href="http://www.hltm.tv/list/7.html" target="_blank">http://www.hltm.tv/list/7.html</a>
+          </p>
+          <ul>
+            <li>ver <code>Number</code> 版本, 全部:"" TV番组:1 OVA:2 OAD:3 剧场版:4 特别版:5 真人版:6 动画版:7 其他:100</li>
+            <li>letter <code>String</code> 字母 全部:"" A:A B:B...以此类推 0-9:100</li>
+            <li>sort <code>Number</code> 排序方式 最新更新:"" 热门播放:1</li>
+            <li>tab <code>Number</code> 类型 连载动漫:7 完结动漫:18</li>
+            <li>page <code>Number</code> 页数</li>
+          </ul>
+          <p>
+            示例: <a href="/list" target="_blank">/list</a>
+          </p>
+          <hr>
+          <h3>新闻列表</h3>
+          <h4>GET: /news</h4>
+          <p>
+            对于红旅动漫页面:
+            <a href="http://www.hltm.tv/list/26.html" target="_blank">http://www.hltm.tv/list/26.html</a>
+          </p>
+          <ul>
+            <li>page <code>Number</code> 页数</li>
+          </ul>
+          <p>
+            示例: <a href="/news" target="_blank">/news</a>
+          </p>
+          <hr>
+          <h3>新闻详情</h3>
+          <h4>GET: /newsDetail</h4>
+          <p>
+            对于红旅动漫页面:
+            <a href="http://www.hltm.tv/new/30.html" target="_blank">http://www.hltm.tv/new/30.html</a>
+          </p>
+          <ul>
+            <li>url <code>String</code> 对于红旅网站新闻详情页面的url(需要Encoder)</li>
+          </ul>
+          <p>
+            示例: <a href="/newsDetail?url=http%3A%2F%2Fwww.hltm.tv%2Fnew%2F30.html" target="_blank">/newsDetail</a>
+          </p>
+          <hr>
+          <h3>专题列表</h3>
+          <h4>GET: /topics</h4>
+          <p>
+            对于红旅动漫页面:
+            <a href="http://www.hltm.tv/list/27.html" target="_blank">http://www.hltm.tv/list/27.html</a>
+          </p>
+          <p>
+            示例: <a href="/topics" target="_blank">/topics</a>
+          </p>
+          <hr>
+          <h3>专题详情列表</h3>
+          <h4>GET: /topicDetail</h4>
+          <p>
+            对于红旅动漫页面:
+            <a href="http://www.hltm.tv/topiclist/201607yuexinfan.html" target="_blank">http://www.hltm.tv/topiclist/201607yuexinfan.html</a>
+          </p>
+          <ul>
+            <li>page <code>Number</code> 页数</li>
+            <li>url <code>String</code> 对于红旅网站专题详情页面的url(需要Encoder)</li>
+          </ul>
+          <p>
+            示例: <a href="/topicDetail?url=http%3A%2F%2Fwww.hltm.tv%2Ftopiclist%2F201607yuexinfan.html" target="_blank">/topicDetail</a>
+          </p>
+        </div>
+      </div>
+      <blockquote>
+        本站整理的红旅动漫网接口目的是为会APP开发的程序员使用,希望红旅也有APP可以使用,请勿用于其他用途,谢谢!
+        <br> 如有问题,请邮件朋也 1956587218@qq.com
+      </blockquote>
+    </div>
+  </div>
+  <div style="display:none;">
+    <script src="https://s4.cnzz.com/z_stat.php?id=1260305659&web_id=1260305659" language="JavaScript"></script>
+  </div>
+</body>
+</html>
